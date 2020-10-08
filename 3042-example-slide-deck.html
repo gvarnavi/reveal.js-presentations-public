@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>GV Presentations</title>
+		<title>3.042 Reveal.js Intro</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -22,17 +22,21 @@
 					An html-framework for presentations.
 					</textarea>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-					## Why Reveal.js?  
-					- It's elegant <!-- .element: class="fragment" -->
-					- Supports dynamic content <!-- .element: class="fragment" -->
-					- Only requires a web-browser <!-- .element: class="fragment" -->
-					- Easy to share <!-- .element: class="fragment" -->
-					- (relatively) Easy to use <!-- .element: class="fragment" -->
-					  - but not **too** easy
-					</textarea>
+
+				<section>
+					<h2>Why Reveal.js?</h2>
+					<ul>
+						<li class="fragment">It's elegant </li>
+						<li class="fragment">Supports dynamic content
+							<ul> <li class="fragment"> Essentially, anything on a website </li></ul> </li>
+						<li class="fragment"> Only requires a web-browser</li>
+						<li class="fragment"> Easy to share
+							<ul> <li class="fragment"> <a href="https://gvarnavi.github.io/reveal.js-presentations-public/3042-example-slide-deck.html"> public link</a> </li></ul> </li>
+						<li class="fragment">(Relatively) Easy to use
+							<ul> <li class="fragment"> But not too easy </li></ul> </li>
+					</ul>
 				</section>
+
 				<section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n-----\r?\n">
 					<textarea data-template>
 					## Slide Backgrounds
@@ -40,36 +44,71 @@
 					-----
 					
 					<!-- .slide: data-background-color="aquamarine"-->
-					### All CSS color formats are supported 
+					#### All CSS color formats are supported 
 
 					-----
 					
 					<!-- .slide: data-background-image="https://2u.com/static/1ee5144f5c1c24a0f36c30b573e677b8/99142/mit-great-dome-roof-view_7UWHWKv.max-2880x1800.jpg"-->
-					### As are images
+					#### As are images
 
 					-----
 					
-					<!-- .slide: data-background-iframe="https://slides.com"-->
+					<!-- .slide: data-background-iframe="http://onemit.mit.edu/"-->
 					<!-- .slide: data-background-interactive-->
-					### And even fully-functioning web pages
+					#### And even fully-functioning web pages <!-- .element: style="color:black" -->
 
 					</textarea>
 				</section>
+
 				<section data-markdown data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n-----\r?\n">
 					<textarea data-template>
 					## Slide Layouts  
-					How am I navigating thr
+					How am I navigating this though?  
+					Try pressing Esc to see.  
+					There's both horizontal and vertical slides
 
 					-----
 					
-					<!-- .element: data-background-color="aquamarine"-->
-					### All CSS color formats are supported 
+					- left/right arrows switch b/w horizontal slides.  
+					- up/down arrows switch b/w vertical slides.  <!-- .element: class="fragment" -->
+					- (shift+) spacebar moves in a snakelike path.  <!-- .element: class="fragment" -->
 
-					-----
-					
-					<!-- .element: data-background-image="https://2u.com/static/1ee5144f5c1c24a0f36c30b573e677b8/99142/mit-great-dome-roof-view_7UWHWKv.max-2880x1800.jpg"-->
-					### As are images
+					</textarea>
+				</section>
 
+				<section>
+					<h2>Auto-animate</h2>
+					<p>Use smooth CSS transitions</p>
+					<section data-auto-animate>
+						<div data-id="box" style="height: 50px; background: salmon;"></div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="box" style="height: 200px; background: blue;"></div>
+					</section>
+					<section data-auto-animate data-markdown>
+						- Mercury
+						- Jupiter
+						- Mars
+					</section>
+					<section data-auto-animate data-markdown>
+						- Mercury
+						- Earth
+						- Jupiter
+						- Saturn
+						- Mars
+					</section>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					<!-- .slide: data-background="#dddddd"-->
+					## Adding Images and Graphics  
+
+					Easy to use scalable graphics (SVGs)
+
+					![angle-path](imgs/3042-example-slide-deck/anglepath.svg)
+
+					And we can zoom in and out  <!-- .element: class="fragment" -->
 					</textarea>
 				</section>
 			</div>
@@ -79,6 +118,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -87,7 +127,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
 			});
 		</script>
 	</body>
